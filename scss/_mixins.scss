@@ -1,0 +1,37 @@
+@mixin flex_col_aic_jcc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex_col_aic {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+@mixin flex_row_aic_jcc {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex_row_aic {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+@mixin bar_with_shadow {
+	width: 100%;
+	padding: 20px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+@mixin bar_no_shadow {
+	width: 100%;
+	padding: 15px;
+	border: none;
+	border-radius: 8px;
+}

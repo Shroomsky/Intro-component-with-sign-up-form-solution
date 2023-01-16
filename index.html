@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable. </p>
+    </header>
+    <section>
+      <h2>Try it free 7 days <span>then $20/mo. thereafter</span></h2>
+      <div class="form">
+        <form autocomplete="off">
+          <label class='sticky'>
+            <input type="text" id="firstName" type="text" placeholder="First Name">
+            <p class="error notActive">Fist Name cannot be empty
+              <i class="error_icon"></i>
+            </p>
+          </label>
+          <label class='sticky'>
+            <input type="text" id="lastName" type="text" placeholder="Last Name">
+
+            <p class="error notActive">Last Name cannot be empty
+              <i class="error_icon"></i>
+            </p>
+          </label>
+          <label class='sticky'>
+            <input type="text" id="emailAddress" type="text" placeholder="Email Address">
+            <p class="error notActive">Looks like is not an email
+              <i class="error_icon"></i>
+            </p>
+          </label>
+          <label class='sticky'>
+            <input type="password" id="password" autocomplete="new-password" placeholder="Password">
+            <p class="error notActive">Password cannot be empty
+              <i class="error_icon"></i>
+            </p>
+          </label>
+          <button>Claim your free trial</button>
+        </form>
+        <p>By clicking the button, you are agreeing to our<a href=""> Terms and Services</a></p>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Shroomsky" target="_blank">@Shroomsky</a>.
+    </p>
+  </footer>
+  <script src="./JS/main.js"></script>
+</body>
+
+</html>

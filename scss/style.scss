@@ -1,0 +1,239 @@
+@use "./colors" as colors;
+@use "./mixins" as mixins;
+
+//============CSS Reset==========//
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+	font-size: 16px;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+ul,
+ol {
+	list-style: none;
+}
+//============CSS Reset==========//
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+	background-image: url(../images/bg-intro-mobile.png);
+	background-size: cover;
+	background-color: colors.$Red;
+}
+a,
+i,
+button {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	color: #fff;
+	& :visited {
+		color: #fff;
+	}
+}
+
+//=================Wrapper=============//
+.wrapper {
+	margin-top: 20px;
+	flex: 1 0 auto;
+	max-width: 360px;
+	padding: 25px 15px;
+	@include mixins.flex_col_aic;
+	gap: 10px;
+}
+
+//=================Wrapper=============//
+
+//=================Header=============//
+header {
+	text-align: center;
+	color: #fff;
+	& h1 {
+		padding-bottom: 20px;
+		font-size: 1.7rem;
+	}
+	& p {
+		font-size: 1rem;
+		padding-bottom: 20px;
+	}
+}
+
+//=================Header=============//
+
+//=================Form=============//
+//=================Form=header============//
+h2 {
+	@include mixins.bar_with_shadow;
+	background-color: colors.$Blue;
+	color: #fff;
+	font-size: 1rem;
+	margin: 20px 0px;
+	text-align: center;
+	font-size: 1rem;
+	padding: 20px 50px;
+	& span {
+		font-weight: 400;
+	}
+}
+//=================Form=header============//
+
+//=================Form=field============//
+
+.form {
+	@include mixins.bar_with_shadow;
+	background-color: #fff;
+	color: colors.$Dark_Blue;
+	padding: 40px;
+	label.sticky {
+		width: 100%;
+		position: relative;
+		& i.error_icon {
+			width: 25px;
+			height: 25px;
+			background-image: url(../images/icon-error.svg);
+			background-size: cover;
+			z-index: 2;
+			position: absolute;
+			top: -50px;
+			right: 30px;
+		}
+		> input[type="text"],
+		input[type="password"] {
+			width: 100%;
+			padding: 1.2rem;
+			background: transparent;
+			margin: 10px 0;
+			border-radius: 8px;
+			font-size: 1rem;
+			font-weight: 600;
+			color: colors.$Dark_Blue;
+			border: 1px solid colors.$Grayish_Blue;
+			&:focus {
+				border: 1px solid colors.$Light_Green;
+				outline: none;
+			}
+			
+		}
+	}
+	& button {
+		@include mixins.bar_no_shadow;
+		background-color: colors.$Light_Green;
+		box-shadow: inset 0px -3px 1px 0px colors.$Green;
+		text-transform: uppercase;
+		margin-top: 5px;
+		cursor: pointer;
+		transition: filter 0.3s;
+		outline: none;
+		&:hover {
+			filter: brightness(1.1);
+		}
+	}
+	& p {
+		font-size: 0.8rem;
+		font-weight: 400;
+		color: colors.$Grayish_Blue;
+		text-align: center;
+		margin-top: 10px;
+		& a {
+			color: colors.$Red;
+			font-weight: 700;
+			text-decoration: none;
+		}
+		&.error {
+			color: red;
+			margin-top: -5px;
+			font-weight: 600;
+			font-style: italic;
+			text-align: right;
+			position: relative;
+		}
+		&.notActive {
+			display: none;
+		}
+	}
+}
+//=================Form=field============//
+
+//=================Error=============//
+
+//=================Error=============//
+//=================Form=============//
+
+//=====================Footer================//
+.footer {
+	padding: 0.5rem;
+	width: 100%;
+	color: #fff;
+	background-color: colors.$Dark_Blue;
+	font-size: 0.7rem;
+	& .attribution {
+		text-align: center;
+		& a {
+			text-decoration: none;
+			color: #fff;
+			&:visited {
+				color: #fff;
+			}
+		}
+	}
+}
+//=====================Footer================//
+//=====================Media================//
+@media (min-width: 1200px) {
+	.wrapper {
+		min-width: 1200px;
+		@include mixins.flex_row_aic_jcc;
+		& header {
+			text-align: left;
+			margin-right: 20px;
+			& h1 {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.form {
+		min-width: 600px;
+	}
+}
+
+//=====================Media================//
