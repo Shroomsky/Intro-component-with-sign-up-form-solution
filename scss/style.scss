@@ -124,37 +124,34 @@ h2 {
 	background-color: #fff;
 	color: colors.$Dark_Blue;
 	padding: 40px;
-	label.sticky {
-		width: 100%;
+	& i.error_icon {
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		background-image: url(../images/icon-error.svg);
+		background-size: cover;
+		z-index: 2;
+		top: -50px;
+		right: 30px;
+	}
+	& input[type="text"],
+	& input[type="password"] {
 		position: relative;
-		& i.error_icon {
-			width: 25px;
-			height: 25px;
-			background-image: url(../images/icon-error.svg);
-			background-size: cover;
-			z-index: 2;
-			position: absolute;
-			top: -50px;
-			right: 30px;
-		}
-		> input[type="text"],
-		input[type="password"] {
-			width: 100%;
-			padding: 1.2rem;
-			background: transparent;
-			margin: 10px 0;
-			border-radius: 8px;
-			font-size: 1rem;
-			font-weight: 600;
-			color: colors.$Dark_Blue;
-			border: 1px solid colors.$Grayish_Blue;
-			&:focus {
-				border: 1px solid colors.$Light_Green;
-				outline: none;
-			}
-			
+		width: 100%;
+		padding: 1.2rem;
+		background: transparent;
+		margin: 10px 0;
+		border-radius: 8px;
+		font-size: 1rem;
+		font-weight: 600;
+		color: colors.$Dark_Blue;
+		border: 1px solid colors.$Grayish_Blue;
+		&:focus {
+			border: 1px solid colors.$Light_Green;
+			outline: none;
 		}
 	}
+
 	& button {
 		@include mixins.bar_no_shadow;
 		background-color: colors.$Light_Green;

@@ -128,22 +128,18 @@ h2 span {
   color: hsl(249deg, 10%, 26%);
   padding: 40px;
 }
-.form label.sticky {
-  width: 100%;
-  position: relative;
-}
-.form label.sticky i.error_icon {
+.form i.error_icon {
+  position: absolute;
   width: 25px;
   height: 25px;
   background-image: url(../images/icon-error.svg);
   background-size: cover;
   z-index: 2;
-  position: absolute;
   top: -50px;
   right: 30px;
 }
-.form label.sticky > input[type=text],
-.form label.sticky input[type=password] {
+.form input[type=text], .form input[type=password] {
+  position: relative;
   width: 100%;
   padding: 1.2rem;
   background: transparent;
@@ -154,8 +150,7 @@ h2 span {
   color: hsl(249deg, 10%, 26%);
   border: 1px solid hsl(246deg, 25%, 77%);
 }
-.form label.sticky > input[type=text]:focus,
-.form label.sticky input[type=password]:focus {
+.form input[type=text]:focus, .form input[type=password]:focus {
   border: 1px solid hsla(154deg, 59%, 51%, 0.88);
   outline: none;
 }
